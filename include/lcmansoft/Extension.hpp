@@ -1,13 +1,15 @@
 #pragma once
 
-#include "framework.h"
 
-#include <libloaderapi.h>
 #include <filesystem>
 #include <memory>
 #include <cstdint>
 
 #include "forward.hpp"
+
+#ifdef _WIN32
+#include "windows/windows_ext.inl"
+#endif
 
 namespace lc::mansoft::extension {
 	extern"C" using ExtensionInitFn = std::int32_t(Extension*);
@@ -26,7 +28,7 @@ namespace lc::mansoft::extension {
 
 	MANSOFT_API class Extension {
 	private:
-		HMODULE mod;
+		_detail::libhandle mod;
 		ExtensionInitFn* extensionInitFn;
 		std::vector<std::unique_ptr<ExtensionObject>> extensionRefs;
 	public:

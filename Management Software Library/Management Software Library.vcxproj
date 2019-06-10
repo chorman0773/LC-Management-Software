@@ -111,6 +111,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -171,11 +173,14 @@
     <ClInclude Include="..\include\lcmansoft\Buisness Manager.h" />
     <ClInclude Include="..\include\lcmansoft\Extension.hpp" />
     <ClInclude Include="..\include\lcmansoft\forward.hpp" />
-    <ClInclude Include="..\include\lcmansoft\framework.h" />
     <ClInclude Include="..\include\lcmansoft\pch.h" />
     <ClInclude Include="..\include\lcmansoft\Principal.hpp" />
     <ClInclude Include="..\include\lcmansoft\Resource.h" />
-    <ClInclude Include="..\include\lcmansoft\targetver.h" />
+    <ClInclude Include="..\include\lcmansoft\windows\framework.h" />
+    <ClInclude Include="..\include\lcmansoft\windows\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\lcmansoft\windows\windows_ext.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

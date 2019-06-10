@@ -32,9 +32,6 @@
     <ClInclude Include="..\include\lcmansoft\forward.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\lcmansoft\framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\lcmansoft\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -44,8 +41,16 @@
     <ClInclude Include="..\include\lcmansoft\Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\lcmansoft\targetver.h">
+    <ClInclude Include="..\include\lcmansoft\windows\framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\lcmansoft\windows\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\lcmansoft\windows\windows_ext.inl">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
